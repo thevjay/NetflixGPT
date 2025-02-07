@@ -2,7 +2,9 @@
 
 - Create React App
 - Configured TailwindCSS
-- 
+- Header
+- Login
+- Sign Up
 
 # Features
 
@@ -16,7 +18,6 @@
         - Title & Description
         - MovieSuggestions
             - MovieLists * N
-
 - NetflixGPT
     - Search Bar
     - Movie Suggestions
