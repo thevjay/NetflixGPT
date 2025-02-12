@@ -40,8 +40,8 @@ const Login = () => {
         );
 
 
-               console.log("Signed up:", userCredential.user);
-        Navigate("/browse")
+        //        console.log("Signed up:", userCredential.user);
+        // Navigate("/browse")
       } else {
         // **Sign In Logic**
         const userCredential = await signInWithEmailAndPassword(
@@ -49,8 +49,8 @@ const Login = () => {
           email.current.value,
           password.current.value
         );
-        console.log("Signed in:", userCredential.user);
-        Navigate("/browse")
+        // console.log("Signed in:", userCredential.user);
+        // Navigate("/browse")
       }
     } catch (error) {
       setErrorMessage(error.message);
@@ -68,7 +68,6 @@ const Login = () => {
         // Profile updated!
         const {uid, email,displayName,photoURL} = auth.currentUser;
         dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}))
-        Navigate("/browse")
         // ...
       }).catch((error) => {
         // An error occurred
