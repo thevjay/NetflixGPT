@@ -5,8 +5,16 @@ export const API_OPTIONS = {
     method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer '
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzYTEyNDlmZjU0MWVhYTUyODc3YmVkMDQxMTNhM2M2YyIsIm5iZiI6MTczNDgwMjg4MC4yMDIsInN1YiI6IjY3NjZmZGMwOGYxMGMyNzQ2YjkxMDI5YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.p7d2_lXVkQAh3qAI-VUVCx16ACb-DsM03f0t22WwkJM'
   }
 }
 
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500/"
+
+export const BG_IMAGE_URL = "https://assets.nflxext.com/ffe/siteui/vlv3/638e9299-0637-42d1-ba39-54ade4cf2bf6/web/IN-en-20250203-TRIFECTA-perspective_46eb8857-face-4ea6-b901-dbf22b461369_large.jpg"
+
+export const SUPPORTED_LANGUAGES =[
+  {identifier:"en",name:'English'},
+  {identifier:"hindi",name:'Hindi'},
+  {identifier:"spanish",name:'Spanish'},
+]
