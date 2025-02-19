@@ -54,14 +54,14 @@ const handleLanguageChange=(e)=>{
 }
 
   return (
-    <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between'>
+    <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col items-center  md:flex-row md:justify-between'>
       <img 
-        className='w-44'
+        className='w-44 mx-auto md:mx-0'
         src= {LOGO}
         alt='logo'
       />
       { user && (
-        <div className='flex p-2'>
+        <div className='flex p-2 justify-between'>
           {showGptSearch && (
             <select className='p-2 bg-gray-900 text-white m-2' onChange={handleLanguageChange}>
               { SUPPORTED_LANGUAGES.map((lang)=>(
@@ -73,7 +73,7 @@ const handleLanguageChange=(e)=>{
             {showGptSearch ? "Home" : "Search"}
           </button>
           <img 
-            className='w-12 h-12'
+            className=' hidden md:block w-12 h-12'
             src='https://i.pinimg.com/originals/30/db/47/30db479e1558c3ed46b4ed23b3cd98ae.png'
             alt='logo'
           />

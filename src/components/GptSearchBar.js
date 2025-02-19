@@ -30,7 +30,7 @@ const GptSearchBar = () => {
     const handleGptSearchClick = async()=>{
       //setLoading(true);
 
-      const genAI = new GoogleGenerativeAI('AIzaSyDBaS_3u5yoZH3gUv--4hYckHcRggCHkRc')
+      const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_AI)
       const model = genAI.getGenerativeModel({model:'gemini-1.5-flash'});
 
       const prompt =
@@ -84,12 +84,12 @@ const GptSearchBar = () => {
     //   }
 
   return (
-    <div className=' pt-[10%] flex justify-center'>
-      <form className='w-1/2 bg-black grid grid-cols-12' onSubmit={(e)=> e.preventDefault()}>
+    <div className=' pt-[35%] md:pt-[10%] flex justify-center'>
+      <form className='w-full md:w-1/2 bg-black grid grid-cols-12' onSubmit={(e)=> e.preventDefault()}>
         <input 
             ref={searchText}
             type='text' 
-            className='p-4 m-4 col-span-9' 
+            className='p-4 m-4 col-span-9 w-full' 
             placeholder={lang[langKey].gptSearchPlaceholder}
         />
         <button className=' col-span-3 py-2 px-4 m-4 bg-red-600 text-white' onClick={handleGptSearchClick}>{lang[langKey].search}</button>
